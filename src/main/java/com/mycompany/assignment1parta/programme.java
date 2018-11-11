@@ -5,6 +5,7 @@
  */
 package com.mycompany.assignment1parta;
 
+import java.time.Clock;
 import java.util.ArrayList;
 import org.joda.time.LocalDate;
 
@@ -62,8 +63,9 @@ public class programme {
     }
 
     public void printStudents(){
-        ArrayList<Student> CourseStudent = new ArrayList<Student>();
+        System.out.println("Programme: "+ this.getCourseName());
         
+        ArrayList<Student> CourseStudent = new ArrayList<Student>();  
         
         ArrayList<Module> module = new ArrayList<Module>();
        
@@ -73,6 +75,8 @@ public class programme {
         
             Module m = module.get(i);
             
+            System.out.println("Module: "+m.getModulename());
+            
             ArrayList<Student> ModuleStudent = new ArrayList<Student>();
             
             ModuleStudent = m.getStudentList();
@@ -81,18 +85,8 @@ public class programme {
             
                 Student s = ModuleStudent.get(j);
                 
-                if (s. getcourseName().equals(this.getCourseName()) && !(CourseStudent.contains(s))){
-                    CourseStudent.add(s);
+                System.out.println(s.getfName() + "\t Course: " + s.getcourseName());
                 
-                    System.out.println(s.getfName() + "\t Course: " + s.getcourseName());
-                    
-                    System.out.print("\t Modules: ");
-                    
-                    for(int k=0; k<module.size();k++){
-                        System.out.print(module.get(k).getModulename() + " -- ");
-                    }
-                    System.out.println();
-                }
             }
         }
     }
