@@ -14,11 +14,11 @@ import org.joda.time.LocalDate;
  */
 public class programme {
     private String CourseName;
-    private ArrayList moduleList;
+    private ArrayList<Module> moduleList;
     private LocalDate startdate;
     private LocalDate enddate;
 
-    public programme(String csname, LocalDate stdate, LocalDate enddate, ArrayList moduleList) {
+    public programme(String csname, LocalDate stdate, LocalDate enddate, ArrayList<Module> moduleList) {
         this.CourseName = csname;
         this.moduleList = moduleList;
         this.startdate = stdate;
