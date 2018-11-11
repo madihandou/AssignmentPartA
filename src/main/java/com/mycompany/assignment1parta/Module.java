@@ -15,14 +15,17 @@ public class Module {
    
     private String moduleName;
     private String moduleID;
-    private ArrayList SdtList;
+    private ArrayList<Student> SdtList;
     private String coursename;
 
-    public Module(String name,String csname ,String id, ArrayList students) {
-        this.SdtList = students;
-        this.coursename= csname;
+    public Module(String name, String id, ArrayList<Student> students, String csname) {
+
+
         this.moduleName = name;
         this.moduleID = id;
+
+                this.SdtList = students;
+                                this.coursename= csname;
     }
 
     public void setStudentList(ArrayList SL) {
@@ -36,9 +39,8 @@ public class Module {
         return SdtList;
     }
 
-    public void addTotheStudentsList(ArrayList St) {
-
-        this.SdtList.add(St);
+    public void addTotheStudentsList(Student s) {
+        this.SdtList.add(s);
 
     }
 
