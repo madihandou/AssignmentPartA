@@ -1,7 +1,7 @@
-language: java
-jdk:
-  - openjdk7
-  build:
+    language: java
+    jdk:
+    - openjdk7
+    build:
       
       after_success:
           - "mvn clean"
